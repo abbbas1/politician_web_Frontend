@@ -15,7 +15,8 @@ export default {
         nunito: ['Nunito', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
-      }
+      },
+      
     },
   },
   plugins: [],

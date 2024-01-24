@@ -6,44 +6,44 @@ const Footer = () => {
       <footer className=" bg-stone-900 flex justify-around relative">
         <span className="text-stone-200  h-60 pl-5">
           <ul className="list-disc ">
-            <li className="mb-2 mt-5 ">
+            <li className="mb-2 mt-5  hover:underline">
               <NavLink>News</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Social Activity</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>About Party</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Struggle for our Vision</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>History</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>What we do</NavLink>
             </li>
           </ul>
         </span>
         <span className="text-stone-200  h-80 pl-5">
           <ul className="list-disc">
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Regions</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>PTI experts group</NavLink>
             </li>
-            <li className="mb-2 mt-5">
-              <NavLink>Become Member</NavLink>
+            <li className="mb-2 mt-5 hover:underline">
+              <NavLink to={"/memberCreatePage"}>Become Member</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Past Political History</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Donate</NavLink>
             </li>
-            <li className="mb-2 mt-5">
+            <li className="mb-2 mt-5 hover:underline">
               <NavLink>Youth Policy</NavLink>
             </li>
           </ul>

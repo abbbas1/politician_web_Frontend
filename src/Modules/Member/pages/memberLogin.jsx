@@ -2,35 +2,43 @@ import { object, string } from "yup";
 import { ErrorMessage, Field, FormikProvider, useFormik } from "formik";
 import { ToastContainer, toast } from "react-toastify";
 import AxiosInstance from "../../../utils/axios";
-import 'react-toastify/dist/ReactToastify.css';
-// import { useNavigate } from "react-router-dom";
+import "react-toastify/dist/ReactToastify.css";
+import { Link, useNavigate } from "react-router-dom";
 const memberLoginSchema = object({
   memberEmail: string().required("Email is a required field"),
-  password: string().required(),
+  password: string().required("Password is a required field"),
 });
 const MemberLoginPage = () => {
-
+  const Navigate = useNavigate();
   const handleLogin = async (data) => {
     try {
-      const response = await AxiosInstance.post("http://localhost:3344/member/login",data)
+      const response = await AxiosInstance.post(
+        "/member/login",
+        data
+      );
       toast.success(response.data.message);
-      formik.resetForm()
+      // console.log(response.data.Member.id)
+      const id = response.data.Member.id;
+      formik.resetForm();
+      if (response.data.message == "Logged in successfully") {
+        Navigate(`/memberDashboard/${id}/`);
+      }
     } catch (error) {
-    toast.error(error.response?.data.message);
+      toast.error(error.response?.data.message);
     }
   };
   const formik = useFormik({
-    initialValues:{memberEmail:"",password:""},
-    validationSchema:memberLoginSchema,
-    onSubmit:(values)=>{
-        handleLogin(values)
-    }
-  })
+    initialValues: { memberEmail: "", password: "" },
+    validationSchema: memberLoginSchema,
+    onSubmit: (values) => {
+      handleLogin(values);
+    },
+  });
 
   return (
     <>
       <div className=" h-screen flex items-center justify-center">
-        <div className="bg-white p-8 rounded shadow-lg w-96">
+        <div className="bg-stone-50 p-8 rounded shadow-2xl w-96">
           <FormikProvider value={formik}>
             <h1 className="text-2xl font-bold mb-4 text-green-500">Login</h1>
             <div className="mb-4">
@@ -61,7 +69,11 @@ const MemberLoginPage = () => {
             >
               Login
             </button>
-            <ToastContainer/>
+            <div className="flex justify-center pt-4 items-center">
+            <p className="">Did not have account?</p>
+            <button className="text-green-600 font-bold text-lg hover:underline" onClick={()=>Navigate("/memberCreatePage")}>Become Member</button>
+            </div>
+            <ToastContainer />
           </FormikProvider>
         </div>
       </div>
