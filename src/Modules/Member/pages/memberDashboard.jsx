@@ -29,9 +29,9 @@ function MemberDashboard() {
           return(
             <tr className="bg-stone-200 items-center text-center font-medium h-14 ">
               <td className="pl-7 pr-7">
-                <img className="rounded-md" src={element.memberPicture} alt="Profile Pic" />
+                <img className="rounded-full h-16 w-16" src={element.memberPicture} alt="noprofile.webp" />
               </td>
-              <td className="pl-7 ">{element.memberName}</td>
+              <td className="pl-6 ">{element.memberName}</td>
               <td className="pl-7 ">{element.memberEmail}</td>
               <td className="pl-7 ">{element.memberPhoneNumber}</td>
               <td className="pl-7 ">{element.memberCnic}</td>

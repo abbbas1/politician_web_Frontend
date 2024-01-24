@@ -73,28 +73,30 @@ return (
             key={index}
             className="shadow-2xl justify-between border-4 flex flex-col w-80 rounded-md bg-stone-50 mb-5 h-full"
           >
+            {element.member && (
+              <div className="flex  ml-2 mt-2 ">
+                <img
+                  className="h-10 w-10 inline rounded-full"
+                  src={element.member.memberPicture}
+                  alt="noprofile.webp"
+                />
+                <p className="pt-1 pb-1 pl-2 font-semibold text-lg">{element.member.memberName}</p>
+              </div>
+            )}
+            <h1>{}</h1>
+            {element.admin && (
+              <div className="flex  ml-2 mt-2 ">
+                <img
+                  className="h-10 w-10 inline rounded-full"
+                  src={element.admin.adminPicture}
+                  alt={"noprofile.webp"}
+                />
+                <p className="pt-1 pb-1 pl-2 font-semibold text-lg">{element.admin.adminName}</p>
+              </div>
+            )}
+
             <h1 className="pt-2 font-medium pl-2">{element.newsTittle}</h1>
             <h1 className="pt-1 pb-1 pl-2">{element.newsContent}</h1>
-            {element.member && (
-              <>
-                <p className="pt-1 pb-1 pl-2">Created by Member: {element.member.memberName}</p>
-                <img
-                  className=""
-                  src={element.member.memberPicture}
-                  alt="Member Profile"
-                />
-              </>
-            )}
-            {element.admin && (
-              <>
-                <p className="pt-1 pb-1 pl-2">Created by Admin: {element.admin.adminName}</p>
-                <img
-                  className=""
-                  src={element.admin.adminPicture}
-                  alt="Admin Profile"
-                />
-              </>
-            )}
             <img className="" src={element.newsPicture} alt="News Image" />
             <div className="flex justify-evenly pb-2 pt-2 items-center">
               <button

@@ -13,13 +13,13 @@ const Footer = () => {
               <NavLink>Social Activity</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
-              <NavLink>About Party</NavLink>
+              <NavLink to={"https://en.wikipedia.org/wiki/Pakistan_Tehreek-e-Insaf#:~:text=The%20Pakistan%20Tehreek-e-Insaf,minister%20from%202018%20to%20"}>About Party</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
               <NavLink>Struggle for our Vision</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
-              <NavLink>History</NavLink>
+              <NavLink to={"https://en.wikipedia.org/wiki/Pakistan_Tehreek-e-Insaf#History"}>History</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
               <NavLink>What we do</NavLink>
