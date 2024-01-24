@@ -7,7 +7,7 @@ const Footer = () => {
         <span className="text-stone-200  h-60 pl-5">
           <ul className="list-disc ">
             <li className="mb-2 mt-5  hover:underline">
-              <NavLink>News</NavLink>
+              <NavLink to={"/allNews"}>News</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
               <NavLink>Social Activity</NavLink>
@@ -41,7 +41,7 @@ const Footer = () => {
               <NavLink>Past Political History</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
-              <NavLink>Donate</NavLink>
+              <NavLink to={"/donatePage"}>Donate</NavLink>
             </li>
             <li className="mb-2 mt-5 hover:underline">
               <NavLink>Youth Policy</NavLink>

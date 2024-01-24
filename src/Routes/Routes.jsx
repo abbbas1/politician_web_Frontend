@@ -10,6 +10,7 @@ import MemberNewsPage from "../Modules/Member/pages/memberNewsPage";
 import MemberEventsPage from "../Modules/Member/pages/memberEventsPage";
 import CreateMemberPage from "../Modules/Member/module/createMemberPage";
 import AllEventsPage from "../Modules/Events/allEvents";
+import DonationForm from "../Pages/Donatepage";
 const Routing = () => {
   return (
     <Routes>
@@ -19,6 +20,7 @@ const Routing = () => {
         <Route path="/login" element={<MemberLoginPage />} />
         <Route path="/allNews" element={<AllNewsPage />} />
         <Route path="/allEvents" element={<AllEventsPage/>}/>
+        <Route path="/donatePage" element={<DonationForm/>}/>
         <Route path="/memberCreatePage" element={<CreateMemberPage />} />
       </Route>
       <Route path="/memberDashboard/:id" element={<MemberLayout />}>

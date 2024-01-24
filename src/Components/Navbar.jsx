@@ -31,7 +31,7 @@ function Navbar() {
           </NavLink>
         </li>
         <li>
-          <NavLink className=" hover:bg-red-600  hover:text-white text-red-600 pt-2 pb-2 transition duration-200 border-red-600 border-4 pl-3 pr-3" to="">
+          <NavLink className=" hover:bg-red-600  hover:text-white text-red-600 pt-2 pb-2 transition duration-200 border-red-600 border-4 pl-3 pr-3" to="/donatePage">
             DONATE
           </NavLink>
         </li>
