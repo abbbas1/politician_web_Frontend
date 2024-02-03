@@ -11,7 +11,7 @@ function MemberLayout() {
       <Navbar />
     </div>
     <div className="flex-1 flex">
-      <div className="flex-none w-3/12">
+      <div className="flex-none sticky w-3/12">
         <SideBar />
       </div>
       <div className="flex-grow overflow-y-auto">
